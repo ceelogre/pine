@@ -4,19 +4,19 @@
   "description": "househunt",
   "main": "index.js",
   "dependencies": {
+    "@babel/node": "^7.7.4",
     "express": "^4.17.1",
     "mongoose": "^5.8.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
-    "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.6",
     "eslint": "^6.7.2",
     "mocha": "^6.2.2"
   },
   "scripts": {
-    "test": "npm run build && mocha components/users/userTests.js",
+    "test": "npm run build && mocha lib/users/userTests",
     "debug": "babel-node --inspect-brk=9229 src/index.js",
     "dev": "nodemon --exec babel-node -- bin/www",
     "prod": "npm run build && node lib/index.js",
