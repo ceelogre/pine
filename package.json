@@ -1,0 +1,38 @@
+{
+  "name": "pine",
+  "version": "1.0.0",
+  "description": "househunt",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "eslint": "^6.7.2"
+  },
+  "scripts": {
+    "test": "npm run test",
+    "debug": "babel-node --inspect-brk=9229 src/index.js",
+    "dev": "nodemon --exec babel-node -- bin/www",
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceelogre/pine.git"
+  },
+  "keywords": [
+    "house",
+    "rent",
+    "broker"
+  ],
+  "author": "Pine",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ceelogre/pine/issues"
+  },
+  "homepage": "https://github.com/ceelogre/pine#readme"
+}
