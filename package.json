@@ -12,13 +12,18 @@
     "@babel/core": "^7.7.5",
     "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.6",
-    "eslint": "^6.7.2"
+    "eslint": "^6.7.2",
+    "mocha": "^6.2.2"
   },
   "scripts": {
-    "test": "npm run test",
+    "test": "npm run build && mocha components/users/userTests.js",
     "debug": "babel-node --inspect-brk=9229 src/index.js",
     "dev": "nodemon --exec babel-node -- bin/www",
-    "build": "babel src -d lib"
+    "build": "babel components -d lib"
+  },
+  "mocha": {
+    "reporter": "spec",
+    "exit": "true"
   },
   "repository": {
     "type": "git",
