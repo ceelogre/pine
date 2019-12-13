@@ -16,11 +16,12 @@
     "mocha": "^6.2.2"
   },
   "scripts": {
+    "clean": "rm -rf lib && mkdir lib",
     "test": "npm run build && mocha lib/components/users/userTests",
     "debug": "babel-node --inspect-brk=9229 src/index.js",
     "dev": "nodemon --exec babel-node -- bin/www",
     "prod": "npm run build && node lib/index.js",
-    "build": "babel src -d lib"
+    "build": "npm run clean && babel src -d lib"
   },
   "mocha": {
     "reporter": "spec",
