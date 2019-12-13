@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@babel/node": "^7.7.4",
+    "babel": "^6.23.0",
     "express": "^4.17.1",
     "mongoose": "^5.8.0"
   },
