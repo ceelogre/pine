@@ -4,13 +4,13 @@
   "description": "househunt",
   "main": "index.js",
   "dependencies": {
-    "@babel/node": "^7.7.4",
+    "@babel/cli": "^7.7.5",
     "express": "^4.17.1",
     "mongoose": "^5.8.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.5",
     "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
     "@babel/preset-env": "^7.7.6",
     "eslint": "^6.7.2",
     "mocha": "^6.2.2"
