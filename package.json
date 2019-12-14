@@ -2,7 +2,7 @@
   "name": "pine",
   "version": "1.0.0",
   "description": "househunt",
-  "main": "index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "@babel/cli": "^7.7.5",
     "express": "^4.17.1",
@@ -20,7 +20,7 @@
     "test": "npm run build && mocha lib/components/users/userTests",
     "debug": "babel-node --inspect-brk=9229 src/index.js",
     "dev": "nodemon --exec babel-node -- bin/www",
-    "prod": "npm run build && node lib/index.js",
+    "prod": "node lib/index.js",
     "build": "npm run clean && babel src -d lib"
   },
   "mocha": {
