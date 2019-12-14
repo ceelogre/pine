@@ -20,7 +20,7 @@
     "test": "npm run build && mocha lib/components/users/userTests",
     "debug": "babel-node --inspect-brk=9229 src/index.js",
     "dev": "nodemon --exec babel-node -- bin/www",
-    "prod": "node lib/index.js",
+    "prod": "npm run build && node lib/index.js",
     "build": "npm run clean && babel src -d lib"
   },
   "mocha": {
