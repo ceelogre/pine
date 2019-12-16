@@ -35,4 +35,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm test
+      - run: 
+          name: Run tests and reporter
+            command: |
+              # notify CC of pending test report using before-build and upload to CC
+              ./cc-test-reporter before-build
+              npm test
+              ./cc-test-reporter after-build --coverage-input-type lcov -d --exit-code $?
