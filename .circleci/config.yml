@@ -37,8 +37,8 @@ jobs:
       # run tests!
       - run: 
           name: Run tests and reporter
-            command: |
-              # notify CC of pending test report using before-build and upload to CC
-              ./cc-test-reporter before-build
-              npm test
-              ./cc-test-reporter after-build --coverage-input-type lcov -d --exit-code $?
+          command: |
+            # notify CC of pending test report using before-build and upload to CC
+            ./cc-test-reporter before-build
+            npm test
+            ./cc-test-reporter after-build --coverage-input-type lcov -d --exit-code $?
