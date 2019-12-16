@@ -5,6 +5,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: 65a99873d7667ca59e33f05fad7ef1e08b44ecf79830f67238a5c0c8b9403738
     docker:
       # specify the version you desire here
       - image: circleci/node:10.16.2
@@ -20,6 +22,12 @@ jobs:
       - checkout
 
       - run: npm install
+      - run:
+        name: Setup CC test reporter
+        command: |
+          # download test reporter as a static binary
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter
 
       - save_cache:
           paths:
