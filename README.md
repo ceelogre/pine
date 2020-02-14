@@ -8,6 +8,6 @@ How to run the app
 `git clone` repo  
 `npm i`  
 `npm run dev`  
-Head over to `localhost:1211` and Voila!  
+Head over to `localhost:1212` and Voila!  
 
 To run tests: `npm run test`
