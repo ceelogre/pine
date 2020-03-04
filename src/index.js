@@ -12,7 +12,7 @@ i18n.configure({
 app.use(i18n.init)
 app.use(
     (req, res) => {
-        let msg = res.__('up')
+        let msg = res.__('404')
         res.json({msg})
     }
 )
